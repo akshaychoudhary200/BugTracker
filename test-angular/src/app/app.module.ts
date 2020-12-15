@@ -8,13 +8,17 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { LoginSuccessfullComponent } from './login-successfull/login-successfull.component';
 import { RegisterComponent } from './register/register.component';
+import { ManagerComponent } from './manager/manager.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LoginSuccessfullComponent,
-    RegisterComponent
+    RegisterComponent,
+    ManagerComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

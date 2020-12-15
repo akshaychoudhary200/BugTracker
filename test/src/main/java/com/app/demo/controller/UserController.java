@@ -6,6 +6,8 @@ import com.app.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class UserController {
     @Autowired
@@ -34,6 +36,18 @@ public class UserController {
             }
         }
         return validUser;
+    }
+
+    @GetMapping("/getprojectteam")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public List<User> fetchProjectMembers() throws Exception{
+        List<User> userList = null;
+        userList = userService.fetchEmployees();
+        if(userList != null) {
+            return userList;
+        } else {
+            throw new Exception("no project members found");
+        }
     }
 
 }

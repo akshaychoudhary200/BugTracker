@@ -17,7 +17,8 @@ public class User {
     @Column(nullable = false)
     private String role;
 
-    public User() {}
+    public User() {
+    }
 
 /*    public User() { }
     public User(String userName, String emailId, String password, String role) {

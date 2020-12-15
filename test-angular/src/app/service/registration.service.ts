@@ -21,4 +21,8 @@ export class RegistrationService {
   public registerFromRest(user : User):Observable<any> {
     return this._http.post<any>("http://localhost:8080/register",user);
   }
+
+  getProjectTeamList() : Observable<User[]> {
+    return this._http.get<User[]>("http://localhost:8080/getprojectteam");
+  }
 }
