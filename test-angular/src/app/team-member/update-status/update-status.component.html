@@ -1,0 +1,12 @@
+<p>update-status works!</p>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>status</label>
+    <div>
+      <input type="text" class="form-control" id = "bugStatus"
+             [(ngModel)]="bug.bugStatus" name="bugStatus">
+    </div>
+
+    <button class="btn btn-success" type="submit">submit</button>
+  </div>
+</form>

@@ -4,6 +4,7 @@ import {Project} from "../model/project";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {coerceNumberProperty} from "@angular/cdk/coercion";
+import {Bugs} from "../model/bugs";
 
 @Injectable({
   providedIn: 'root'
@@ -47,5 +48,30 @@ export class RegistrationService {
   public saveprojectMembers(teams: Array<User>):Observable<any> {
     console.log(teams[0]);
     return this._http.post<any>("http://localhost:8080/createteam",teams);
+  }
+
+  public getBugsForTeamMembers(): Observable<Bugs[]> {
+   // this.id = Number(JSON.parse(sessionStorage.getItem("userId")))
+    this.id = 2;
+    console.log("bugs list for team member",sessionStorage.getItem("userId"))
+    return  this._http.get<Bugs[]>(`http://localhost:8080/getbuglistid/${this.id}`);
+
+  }
+
+  public updateBugsStatus(id: number,bug : Bugs):Observable<Bugs> {
+    return  this._http.put<any>(`http://localhost:8080//bugsstatusupdate/${id}`,bug);
+  }
+
+  public getbugById(id : number):Observable<Bugs> {
+    return this._http.get<any>(`http://localhost:8080/getbugbyid/${id}`)
+  }
+
+  public getAllBugs():Observable<Bugs[]> {
+    return this._http.get<Bugs[]>("http://localhost:8080/getallbugs")
+  }
+
+  public deletbugbyid(bugId: number):Observable<Bugs> {
+    console.log(bugId)
+    return this._http.delete<any>(`http://localhost:8080/deletebugbyid/${bugId}`)
   }
 }

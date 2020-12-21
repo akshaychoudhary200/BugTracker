@@ -23,51 +23,33 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-5">
         <div class="table-responsive">
           <table class="table">
             <thead>
             <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
+              <th>bugid</th>
+              <th>bugstatus</th>
+              <th>userid</th>
+              <th>bugdesc</th>
+              <th>bugstatus</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td>Cell 1</td>
-              <td>Cell 2</td>
-            </tr>
-            <tr>
-              <td>Cell 3</td>
-              <td>Cell 4</td>
+            <tr *ngFor="let b of bug">
+              <td>{{b.bugId}}</td>
+              <td>{{b.bugStatus}}</td>
+              <td>{{b.userId}}</td>
+              <td>{{b.bugDesc}}</td>
+              <td>{{b.bugStatus}}</td>
+              <td><button class="btn btn-danger" (click)="delete(b.bugId,b.bugDesc)">delete</button></td>
             </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="table-responsive">
-          <table class="table">
-            <thead>
-            <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>Cell 1</td>
-              <td>Cell 2</td>
-            </tr>
-            <tr>
-              <td>Cell 3</td>
-              <td>Cell 4</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="col-md-4">
+
+      <div class="col-md-7">
         <div class="table-responsive">
           <table class="table">
             <thead>

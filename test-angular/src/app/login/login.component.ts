@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
     private _router : Router) { }
 
   ngOnInit(): void {
+
   }
 
   loginUser() {
@@ -38,7 +39,7 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem("userLogin",JSON.stringify(data));
           sessionStorage.setItem("userId",data.id);
           console.log(typeof(data.id))
-
+          console.log(sessionStorage.getItem("userId"))
           console.log(sessionStorage.getItem("userLogin"));
 
           this._router.navigate(["/manager"]);

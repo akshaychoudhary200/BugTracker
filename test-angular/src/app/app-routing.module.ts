@@ -10,6 +10,7 @@ import {CreateTeamComponent} from "./manager/create-team/create-team.component";
 import {TeamMemberComponent} from "./team-member/team-member.component";
 import {ViewProjectsComponent} from "./manager/view-projects/view-projects.component";
 import {ProjectdetailsComponent} from "./manager/projectdetails/projectdetails.component";
+import {UpdateStatusComponent} from "./team-member/update-status/update-status.component";
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:"createteam",component:CreateTeamComponent},
   {path:"teammember",component:TeamMemberComponent},
   {path:"view-projects",component:ViewProjectsComponent},
-  {path:"projectdetails",component:ProjectdetailsComponent}
+  {path:"projectdetails",component:ProjectdetailsComponent},
+  {path:"updatebug/:bugId",component:UpdateStatusComponent}
 ];
 
 @NgModule({

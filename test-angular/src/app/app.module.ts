@@ -18,6 +18,7 @@ import { ViewProjectsComponent } from './manager/view-projects/view-projects.com
 import { TasksComponent } from './manager/tasks/tasks.component';
 import { ProjectdetailsComponent } from './manager/projectdetails/projectdetails.component';
 import { TesterComponent } from './tester/tester.component';
+import { UpdateStatusComponent } from './team-member/update-status/update-status.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TesterComponent } from './tester/tester.component';
     ViewProjectsComponent,
     TasksComponent,
     ProjectdetailsComponent,
-    TesterComponent
+    TesterComponent,
+    UpdateStatusComponent
 
   ],
   imports: [

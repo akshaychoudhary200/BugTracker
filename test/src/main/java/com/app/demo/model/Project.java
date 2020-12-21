@@ -22,7 +22,7 @@ public class Project {
 
     @ManyToOne(fetch = FetchType.LAZY,optional = false)
     @JoinColumn(nullable = false)
-   // @JsonManagedReference
+   //@JsonManagedReference
     @JsonIgnore
     private User user;
 
