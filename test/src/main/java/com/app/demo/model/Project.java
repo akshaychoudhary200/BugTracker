@@ -1,5 +1,8 @@
 package com.app.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
@@ -15,9 +18,21 @@ public class Project {
     @Column(nullable = false)
     private String projectStatus;
     @Column(nullable = false)
-    private String projectTitle;
-    @Column(nullable = false)
     private String projectDesc;
+
+    @ManyToOne(fetch = FetchType.LAZY,optional = false)
+    @JoinColumn(nullable = false)
+   // @JsonManagedReference
+    @JsonIgnore
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public Project() { }
 
@@ -42,13 +57,6 @@ public class Project {
         this.projectStatus = projectStatus;
     }
 
-    public String getProjectTitle() {
-        return projectTitle;
-    }
-    public void setProjectTitle(String projectTitle) {
-        this.projectTitle = projectTitle;
-    }
-
     public String getProjectDesc() {
         return projectDesc;
     }
@@ -56,13 +64,13 @@ public class Project {
         this.projectDesc = projectDesc;
     }
 
+
     @Override
     public String toString() {
         return "Project{" +
                 "projectId=" + projectId +
                 ", projectName=" + projectName +
                 ", projectStatus=" + projectStatus +
-                ", projectTitle=" + projectTitle +
                 ", projectDesc=" + projectDesc +
                 '}';
     }

@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
       error => {
         console.log("not registered");
         this._route.navigate(['/register'])
-        this.mesg = "registration failed please chek your internet connection"
+        this.mesg = "registration failed please check your internet connection"
       }
     );
   }

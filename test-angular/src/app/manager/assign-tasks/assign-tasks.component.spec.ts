@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginSuccessfullComponent } from './login-successfull.component';
+import { AssignTasksComponent } from './assign-tasks.component';
 
-describe('LoginSuccessfullComponent', () => {
-  let component: LoginSuccessfullComponent;
-  let fixture: ComponentFixture<LoginSuccessfullComponent>;
+describe('AssignTasksComponent', () => {
+  let component: AssignTasksComponent;
+  let fixture: ComponentFixture<AssignTasksComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginSuccessfullComponent ]
+      declarations: [ AssignTasksComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginSuccessfullComponent);
+    fixture = TestBed.createComponent(AssignTasksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

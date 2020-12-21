@@ -1,0 +1,38 @@
+.page-container { /* parent to sidebar*/
+  height: 100%;
+  background: white;
+   display: flex;
+}
+
+.nav {
+  background: #1e2833;
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  margin-right: 10px;
+  background: #1e2833;
+}
+
+.nav-items {
+  font-size: 20px;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-family:"Droid Sans" ;
+}
+
+.nav-item:hover {
+  color: orange;
+}
+
+.page-content-container {
+  display: flex;
+  padding: 50px;
+}

@@ -8,26 +8,13 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
+
     private String userName;
-    @Column(nullable = false)
     private String emailId;
-    @Column(nullable = false)
     private String password;
-    @Column(nullable = false)
     private String role;
 
-    public User() {
-    }
-
-/*    public User() { }
-    public User(String userName, String emailId, String password, String role) {
-        //this.id = id;
-        this.userName = userName;
-        this.emailId = emailId;
-        this.password = password;
-        this.role = role;
-    }*/
+    public User() { }
 
     public Long getId() {
         return id;

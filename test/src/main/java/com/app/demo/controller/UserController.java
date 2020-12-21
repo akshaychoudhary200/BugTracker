@@ -25,10 +25,14 @@ public class UserController {
     @PostMapping("/login")
     @CrossOrigin(origins = "http://localhost:4200")
     public User loginUser(@RequestBody User user) throws Exception {
+
+        System.out.println(user.toString());
+
         String loginEmail = user.getEmailId();
         String loginPass = user.getPassword();
 
         User validUser = null;
+
         if( loginEmail != null && loginPass != null) {
             validUser = userService.fetchUserByEmailAndPassword(loginEmail,loginPass);
             if(validUser == null) { // internal 500 server error with message below
@@ -38,7 +42,7 @@ public class UserController {
         return validUser;
     }
 
-    @GetMapping("/getprojectteam")
+    @GetMapping("/getusers")
     @CrossOrigin(origins = "http://localhost:4200")
     public List<User> fetchProjectMembers() throws Exception{
         List<User> userList = null;
@@ -49,5 +53,6 @@ public class UserController {
             throw new Exception("no project members found");
         }
     }
+
 
 }

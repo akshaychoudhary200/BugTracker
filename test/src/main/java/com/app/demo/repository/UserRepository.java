@@ -9,9 +9,11 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<User,Long> {
     public User findByEmailId(String emailId); // custom created for emailid
 
-    public User findByEmailIdAndPassword(String emailId, String password);
+    public User findByEmailIdAndPassword(String emailId, String password); // custom
 
-    public List<User> findByRoleNot(String role);
+    public List<User> findByRoleNot(String role); // list of user who are not managers
+
+
     //public List<User> findAll();
 
     // method overloading to try

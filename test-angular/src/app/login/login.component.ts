@@ -33,9 +33,17 @@ export class LoginComponent implements OnInit {
        // let user  = data;
         console.log("data to user object",JSON.stringify(data.role));
         if(data.role === "manager") {
+          //sessionStorage.setItem("userId",data.name);
+          //sessionStorage.setItem("id",data.id);
+          sessionStorage.setItem("userLogin",JSON.stringify(data));
+          sessionStorage.setItem("userId",data.id);
+          console.log(typeof(data.id))
+
+          console.log(sessionStorage.getItem("userLogin"));
+
           this._router.navigate(["/manager"]);
         } else {
-          this._router.navigate(["/team-member"]);
+          this._router.navigate(["/teammember"]);
         }
       },
       error => {

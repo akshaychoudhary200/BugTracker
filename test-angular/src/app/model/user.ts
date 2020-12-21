@@ -4,6 +4,7 @@ export class User {
   emailId : string;
   password : string;
   role : string;
+  disable: any;
 
   constructor() { }
 }

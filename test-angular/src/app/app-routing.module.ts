@@ -1,19 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from "./login/login.component";
-import {LoginSuccessfullComponent} from "./login-successfull/login-successfull.component";
 import {RegisterComponent} from "./register/register.component";
 import {ManagerComponent} from "./manager/manager.component";
-import {TeamComponent} from "./team/team.component";
+import {CreateProjectComponent} from "./manager/create-project/create-project.component";
+import {AssignTasksComponent} from "./manager/assign-tasks/assign-tasks.component";
+import {MyprojectsComponent} from "./myprojects/myprojects.component";
+import {CreateTeamComponent} from "./manager/create-team/create-team.component";
+import {TeamMemberComponent} from "./team-member/team-member.component";
+import {ViewProjectsComponent} from "./manager/view-projects/view-projects.component";
+import {ProjectdetailsComponent} from "./manager/projectdetails/projectdetails.component";
 
 
 const routes: Routes = [
-  {path:"register",component:RegisterComponent},
   {path:'',component:LoginComponent},
+  {path:"register",component:RegisterComponent},
   {path:'login',component:LoginComponent},
-  {path:"login-successfull",component:LoginSuccessfullComponent},
   {path:"manager",component:ManagerComponent},
-  {path:"team-member",component:TeamComponent}
+  {path:"createproject",component:CreateProjectComponent},
+  {path:"assign-tasks",component:AssignTasksComponent},
+  {path:"myprojects",component:MyprojectsComponent},
+  {path:"createteam",component:CreateTeamComponent},
+  {path:"teammember",component:TeamMemberComponent},
+  {path:"view-projects",component:ViewProjectsComponent},
+  {path:"projectdetails",component:ProjectdetailsComponent}
 ];
 
 @NgModule({
