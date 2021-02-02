@@ -1,7 +1,9 @@
-# BugTracker
-BugTracker is a project managment and issue tracker system in which a manager or any project owner can create project build up his team
-by selecting developers,testers as per required by the project the member can raise bugs ticket which are displayed with priority so the
-developer can know which bug needs the immediate attention.
+A bug tracking system (BTS) is a software application that is designed to help programmers to keep track of reported software bugs in their work.
+A major component of bug tracking system is a database that records facts and known bugs submitted by the tester.
+Bug Tracking System is an ideal solution to track the bugs of a product, solution or an application.
+Bug Tracking System allows individual or groups of developers to keep track of outstanding bugs in their product effectively.
 
-The Frontend part of the bug tracker system is made using Angular
-Backend is made using SpringBoot REST api
+Technologies used :
+FrontEnd = Angular
+Backend = SpringBoot,Rest Api
+Database = MySql
