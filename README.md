@@ -5,5 +5,5 @@ Bug Tracking System allows individual or groups of developers to keep track of o
 
 Technologies used 
 FrontEnd = Angular, 
-Backend = SpringBoot,Rest Api, 
+Backend = SpringBoot,MVC,Rest Api, 
 Database = MySql 
